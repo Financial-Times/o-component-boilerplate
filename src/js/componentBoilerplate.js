@@ -12,7 +12,6 @@ class ComponentBoilerplate {
 		if (!(rootEl instanceof HTMLElement)) {
 			rootEl = document.querySelector(rootEl);
 		}
-		//const ComponentBoilerplateEl = rootEl.querySelector('[data-o-component="o-component-boilerplate"]');
 		if (rootEl instanceof HTMLElement && /\bo-component-boilerplate\b/.test(rootEl.getAttribute('data-o-component'))) {
 			return new ComponentBoilerplate(rootEl, opts);
 		}
