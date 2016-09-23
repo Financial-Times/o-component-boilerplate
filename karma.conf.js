@@ -21,7 +21,9 @@ module.exports = function(config) {
 			'karma-mocha',
 			'karma-phantomjs-launcher',
 			'karma-webpack',
-			'karma-sinon'
+			'karma-sinon',
+			'karma-istanbul',
+			'karma-coverage'
 		],
 
 
@@ -40,14 +42,15 @@ module.exports = function(config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'test/**/*.test.js': ['webpack']
+			'test/**/*.test.js': ['webpack'],
+			'main.js': ['istanbul']
 		},
 
 
 		// test results reporter to use
-		// possible values: 'dots', 'progress'
+		// possible values: 'dots', 'progress', 'istanbul'
 		// available reporters: https://npmjs.org/browse/keyword/karma-reporter
-		reporters: ['progress'],
+		reporters: ['progress', 'istanbul'],
 
 
 		// web server port
