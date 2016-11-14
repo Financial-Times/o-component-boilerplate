@@ -23,7 +23,7 @@ _Whatever usage instructions your component has. We've broken this down by Marku
 
 _Common templating can go here, especially if there is only one template, but people can always check the demos for more._
 
-_Remember to start your code blocks with <code>```html</code> so your `html` is formatted correctly_
+_Remember to start your codeblocks with three backticks and "html" so your markup is syntax highlighted correctly._
 
 ```html
 <div data-o-component="o-component-boilerplate" class='o-component-boilerplate'>
@@ -31,7 +31,7 @@ _Remember to start your code blocks with <code>```html</code> so your `html` is 
 ```
 
 ### JavaScript
-_Remember to start your code blocks with <code>```js</code> so your `js` syntax is formatted correctly_
+_Remember to start your codeblocks with three backticks and "js" so your js is syntax highlighted correctly._
 
 _Though it's not practical to repeat every aspect of Origami modules convention for every component, **A LOT** of people get tripped up by modules not auto initialising, so this line (remember to change the `o-component-boilerplate` to your component name) is useful if you have JavaScript:_
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ```
 
 ### Sass
-_Remember to start your code blocks with <code>```sass</code> so your `sass` syntax is formatted correctly_
+_Remember to start your codeblocks with three backticks and "sass" so your markup is syntax highlighted correctly._
 
 _Though it's not practical to repeat every aspect of Origami modules convention for every component, **A LOT** of people get tripped up by silent mode, so this line (remember to change the o-component-boilerplate to your component name) is useful if you have Sass:_
 
@@ -72,7 +72,7 @@ If your component is particularly complicated (image sets fall into this categor
 
 
 ## Migration guide
-_Migration guides are very important! Always include one for major releases. To create a codeblock that has diff highligting, use three backticks followed by the word diff ie: <code>```diff</code>_
+_Migration guides are very important! Always include one for major releases. To create a codeblock that has diff highligting, use three backticks followed by the word diff_
 
 ### Migrating from 1.X.X to 2.X.X
 
