@@ -10,7 +10,6 @@ _A table of contents to help people find things_
 	- [Markup](#markup)
 	- [JavaScript](#javascript)
 	- [Sass](#sass)
-	- [Customising o-cookie-message HTML](customising-o-cookie-message-html)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [Migration guide](#migration-guide)
@@ -27,7 +26,7 @@ _Common templating can go here, especially if there is only one template, but pe
 _Remember to start your code blocks with <code>```html</code> so your `html` is formatted correctly_
 
 ```html
-<div data-o-component="o-cookie-message" class='o-cookie-message o-cookie-message--banner-centric'>
+<div data-o-component="o-component-boilerplate" class='o-component-boilerplate'>
 </div>
 ```
 
