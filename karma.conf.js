@@ -15,14 +15,11 @@ module.exports = function(config) {
 		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter
 		frameworks: ['mocha', 'sinon'],
 
-
-
 		plugins: [
 			'karma-mocha',
 			'karma-phantomjs-launcher',
 			'karma-webpack',
 			'karma-sinon',
-			'karma-istanbul',
 			'karma-coverage'
 		],
 
@@ -42,16 +39,18 @@ module.exports = function(config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'test/**/*.test.js': ['webpack'],
-			'main.js': ['istanbul']
+			'test/**/*.test.js': ['webpack']
 		},
 
 
 		// test results reporter to use
 		// possible values: 'dots', 'progress', 'istanbul'
 		// available reporters: https://npmjs.org/browse/keyword/karma-reporter
-		reporters: ['progress', 'istanbul'],
+		reporters: ['progress', 'coverage'],
 
+		coverageReporter: {
+			type : 'text-summary'
+		},
 
 		// web server port
 		port: 9876,
@@ -94,6 +93,13 @@ module.exports = function(config) {
 					{
 						test: /\.json$/,
 						loader: 'json'
+					}
+				],
+				postLoaders: [
+					{ //delays coverage til after tests are run, fixing transpiled source coverage error
+						test: /\.js$/,
+						exclude: /(test|node_modules|bower_components)\//,
+						loader: 'istanbul-instrumenter'
 					}
 				],
 				noParse: [
