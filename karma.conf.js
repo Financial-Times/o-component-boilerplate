@@ -26,7 +26,7 @@ module.exports = function(config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-			'http://cdn.polyfill.io/v2/polyfill.js?features=fetch&flags=gated',
+			'https://cdn.polyfill.io/v2/polyfill.js?flags=gated&ua=safari/4&features=default',
 			'test/*.test.js'
 		],
 
@@ -49,7 +49,10 @@ module.exports = function(config) {
 		reporters: ['progress', 'coverage'],
 
 		coverageReporter: {
-			type : 'text-summary'
+			reporters: [
+				{ type : 'html' },
+				{ type : 'text-summary' }
+			]
 		},
 
 		// web server port
