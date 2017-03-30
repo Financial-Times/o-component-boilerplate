@@ -12,10 +12,10 @@ class ComponentBoilerplate {
 		if (!(rootEl instanceof HTMLElement)) {
 			rootEl = document.querySelector(rootEl);
 		}
-		if (rootEl instanceof HTMLElement && /\bo-component-boilerplate\b/.test(rootEl.getAttribute('data-o-component'))) {
+		if (rootEl instanceof HTMLElement && rootEl.matches('[data-o-component=o-component-boilerplate]')) {
 			return new ComponentBoilerplate(rootEl, opts);
 		}
-		return [].map.call(rootEl.querySelectorAll('[data-o-component="o-component-boilerplate"]'), rootEl => new ComponentBoilerplate(rootEl, opts));
+		return Array.from(rootEl.querySelectorAll('[data-o-component="o-component-boilerplate"]'), rootEl => new ComponentBoilerplate(rootEl, opts));
 	}
 }
 
