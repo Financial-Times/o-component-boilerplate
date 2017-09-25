@@ -1,9 +1,9 @@
-/* eslint-env mocha, sinon, proclaim */
+/* eslint-env mocha */
 import proclaim from 'proclaim';
 import sinon from 'sinon/pkg/sinon';
 import * as fixtures from './helpers/fixtures';
 
-const ComponentBoilerplate = require('./../main');
+import ComponentBoilerplate from './../main';
 
 describe("ComponentBoilerplate", () => {
 	it('is defined', () => {
@@ -31,7 +31,7 @@ describe("ComponentBoilerplate", () => {
 
 	describe("should create a new", () => {
 		beforeEach(() => {
-				fixtures.htmlCode();
+			fixtures.htmlCode();
 		});
 
 		afterEach(() => {
