@@ -21,12 +21,14 @@
 	},
 	"demos": [
 		{
+			"title": "A Useful Demo",
 			"name": "demo",
 			"js": "demos/src/demo.js",
 			"template": "demos/src/demo.mustache",
 			"description": "Description of the demo"
 		},
 		{
+			"title": "Pa11y",
 			"name": "pa11y",
 			"js": "demos/src/demo.js",
 			"template": "demos/src/pa11y.mustache",
